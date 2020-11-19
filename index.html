@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Calculadora Simples
+        </title>
+        <link rel="stylesheet" type="text/css" href="styled.css">
+    </head>
+    <body>
+        <form>
+            <table id="tabela">
+                <tr>
+                    <th colspan="5">Calculadora Simples</th>
+                </tr>
+                <tr>
+                    <td>valor 1 <input type="text" name="val1" id="val1"></td>
+                    <td>
+                        <select name="sinal" id="sinal">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="/">/</option>
+                        </select>
+                    </td>
+                    <td>valor 2 <input type="text" name="val2" id="val2"></td>
+                    <td> <input type="button" value="=" onclick="calcular();" name=""></td>
+                    <td><input type="result" name="result" id="result"></td>
+                </tr>
+                <td id="limpar"> <input type="button" value="Limpar" onclick="limpar();" name=""></td>
+            </table>
+        </form>
+        <script type="text/javascript">
+
+                function calcular(){
+                    let val1   = parseInt(document.getElementById("val1").value);
+                    let val2   = parseInt(document.getElementById("val2").value);
+                    let sinal  = document.getElementById("sinal").value;
+                    let result = document.getElementById("result");
+
+                    if(sinal == "+") result.value = val1 + val2;
+                    if(sinal == "-") result.value = val1 - val2;
+                    if(sinal == "*") result.value = val1 * val2;
+                    if(sinal == "/") result.value = val1 / val2;
+
+                    if(document.getElementById("val1").value.length < 1) {
+                        alert('coloque um número no valor 1')
+                        return false;
+                    }
+                    if(document.getElementById("val2").value.length < 1) {
+                        alert('coloque um número no valor 2')
+                        return false;
+                    }
+                }
+                function limpar() {
+                    if(document.getElementById('result').value!="") {
+                    document.getElementById('val1').value="";
+                    document.getElementById('val2').value="";
+                    document.getElementById('result').value="";
+                    }
+                }                
+        </script>
+    </body>
+</html>

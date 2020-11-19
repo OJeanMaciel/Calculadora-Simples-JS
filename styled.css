@@ -1,0 +1,24 @@
+body {
+    background-image: url(https://s2.glbimg.com/NNbJWCWpPiTmrRTP6Vq_NWVXZw8=/e.glbimg.com/og/ed/f/original/2018/10/31/math-1500720_1920.jpg);
+}
+
+#tabela {
+    background-color: #e4d5d5e3;
+    font: 100%, sans-serif;
+    padding: 100px;
+    border: 5px double blue;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#tabela tr th {
+    font-size: 50px;
+    padding: 60px;
+}
+
+#limpar {
+    margin: 50px;
+    padding: 60px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
