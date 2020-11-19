@@ -17,8 +17,18 @@ body {
 }
 
 #limpar {
-    margin: 50px;
-    padding: 60px;
-    transition-duration: 0.4s;
+    position: absolute;
     cursor: pointer;
+    top: 58%;
+    left: 69.3%;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#limpar:hover {
+    transition: 0.2s;
+    background-color: #999797;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    
 }
